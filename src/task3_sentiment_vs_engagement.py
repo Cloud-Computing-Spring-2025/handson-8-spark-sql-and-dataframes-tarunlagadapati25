@@ -1,5 +1,5 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import when, avg, col
+from pyspark.sql.functions import explode, split, col, count, avg, desc, sum, when, trim
 
 spark = SparkSession.builder.appName("SentimentVsEngagement").getOrCreate()
 
@@ -11,4 +11,14 @@ posts_df = spark.read.option("header", True).csv("input/posts.csv", inferSchema=
 
 
 # Save result
-sentiment_stats.coalesce(1).write.mode("overwrite").csv("outputs/sentiment_engagement.csv", header=True)
+sentiment_df = posts_df.withColumn(
+    "Sentiment", 
+    when(col("SentimentScore") > 0.2, "Positive")
+    .when(col("SentimentScore") < -0.2, "Negative")
+    .otherwise("Neutral")
+)
+sentiment_engagement = sentiment_df.groupBy("Sentiment").agg(
+    avg("Likes").alias("Avg Likes"), 
+    avg("Retweets").alias("Avg Retweets")
+)
+sentiment_engagement.write.csv("output/sentiment_vs_engagement", header=True)

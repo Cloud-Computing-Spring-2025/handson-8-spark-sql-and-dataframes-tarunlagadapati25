@@ -223,9 +223,16 @@ A ranked list of the most-used hashtags and their frequencies.
 
 | Hashtag     | Count |
 |-------------|-------|
-| #tech       | 120   |
-| #mood       | 98    |
-| #design     | 85    |
+| #social     | 29    |
+| #mood       | 25    |
+| #design     | 16    |
+| #bug        | 23    |
+| #love       | 22    |
+| #tech       | 22    |
+| #UX         | 18    |
+| #AI         | 16    |
+| #cleanUI    | 16    |
+| #fail       | 15    |
 
 ---
 
@@ -247,9 +254,9 @@ A summary of user engagement behavior categorized by age group.
 
 | Age Group | Avg Likes | Avg Retweets |
 |-----------|-----------|--------------|
-| Adult     | 67.3      | 25.2         |
-| Teen      | 22.0      | 5.6          |
-| Senior    | 9.2       | 1.3          |
+| Adult     | 75.75     | 24.8         |
+| Teen      | 75.95     | 23.08        |
+| Senior    | 94.7      | 22.725       |
 
 ---
 
@@ -270,9 +277,9 @@ Insights into whether happier or angrier posts get more attention.
 
 | Sentiment | Avg Likes | Avg Retweets |
 |-----------|-----------|--------------|
-| Positive  | 85.6      | 32.3         |
-| Neutral   | 27.1      | 10.4         |
-| Negative  | 13.6      | 4.7          |
+| Positive  | 71.42     | 26.5         |
+| Neutral   | 89.4      | 26.4         |
+| Negative  | 92.0      | 21.4         |
 
 ---
 
@@ -294,8 +301,11 @@ A leaderboard of verified users based on audience engagement.
 
 | Username       | Total Reach |
 |----------------|-------------|
-| @techie42      | 1650        |
-| @designer_dan  | 1320        |
+| @pixel_pusher  | 1588        |
+| @designer_dan  | 1452        |
+| @meme_lord     | 1427        |
+| @critic99      | 1206        |
+| @calm_mind     | 658         |
 
 ---
 
